@@ -6,15 +6,12 @@
 </head>
 <body>
 
-<h1>Biblioteca - Dados do Livro</h1>
+<h1>Biblioteca</h1>
 
-<h2>Informações do Livro</h2>
-
-<p>Título: <span th:text="${livro.titulo}"></span></p>
-
-<p>Autor: <span th:text="${livro.autor}"></span></p>
-
-<p>ISBN: <span th:text="${livro.isbn}"></span></p>
+<ul>
+    <li><a th:href="@{/autores}">Autores</a></li>
+    <li><a th:href="@{/autores/novo}">Cadastrar autor</a></li>
+</ul>
 
 </body>
 </html>

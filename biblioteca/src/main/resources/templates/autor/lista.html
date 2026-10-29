@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Autores</title>
+</head>
+<body>
+
+<h1>Autores cadastrados</h1>
+
+<p th:if="${#lists.isEmpty(autores)}">Nenhum autor cadastrado.</p>
+
+<ul>
+    <li th:each="autor : ${autores}"
+        th:text="${autor.nome} + ' (' + ${autor.nacionalidade} + ')'"></li>
+</ul>
+
+<a th:href="@{/autores/novo}">Novo autor</a>
+
+</body>
+</html>
